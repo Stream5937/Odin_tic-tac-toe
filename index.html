@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="tic-tac-toe.js" defer></script>
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div class="header">
+        <h1>TIC TAC TOE</h1>
+    </div>
+    <div class="leftPanel">
+        <div class="lptext-1">
+            <h2>First player</h2>
+            <p>plays (X) - or - (O)</p>
+        </div>
+        <ul class="plays">
+            <li id="X1">
+                <label for="playsX-1">X goes first</label>
+                <input  type="radio" id="playsX-1" name="plays">
+            </li>
+            <li id="O1">
+                <label for="playsO-1">O goes first</label>
+                <input  type="radio" id="playsO-1" name="plays">
+            </li>
+        </ul>
+        <div class="reset">
+            <label for="reset"></label>
+            <input type="button" id ="reset" name="reset" value="New Game">
+        </div>
+    </div>
+
+    <div class="container">
+        <ul class="board">
+            <li><input type="button" id="0" value=""></li>
+            <li><input type="button" id="1" value =""></li>
+            <li><input type="button" id="2" value=""></li>
+            <li><input type="button" id="3" value=""></li>
+            <li><input type="button" id="4" value=""></li>
+            <li><input type="button" id="5" value=""></li>
+            <li><input type="button" id="6" value=""></li>
+            <li><input type="button" id="7" value=""></li>
+            <li><input type="button" id="8" value=""></li>
+        </ul>
+    </div>
+
+    <div class="rightPanel">
+        <h2>Moves so far: 0</h2>
+        <br>
+        <p>
+            <h1 class="win"></h1>       <!--for win -->
+            <h2 class="winner"></h2>    <!--for winner-->
+       </p> 
+    </div>
+
+    <div class="footer">
+        <div class='footDiv'>
+            <h2 class="footText"></h2>
+        </div>
+    </div>
+
+</body>
+</html>

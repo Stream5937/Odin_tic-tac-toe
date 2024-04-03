@@ -1,0 +1,238 @@
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    display: grid;
+}
+
+::root {
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+head {
+    display: none;
+}
+
+body {
+    width : 100vw;
+    height : 100vh;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+ }
+
+/*---------------------------------HEADER SECTION------------------------------*/
+ .header {
+    grid-area: 1/1/2/4;
+    background-color: antiquewhite;
+    justify-content: center;
+ }
+
+/*---------------------------------LEFT SECTION------------------------------*/
+ .leftPanel {
+    grid-area: 2/1/3/2;
+    background-color: antiquewhite;
+    justify-content: center;
+    align-items: flex-start;
+    grid-template-rows: repeat(6, 1fr);
+    
+ }
+
+ .lptext-1 {
+    grid-area: 1/1/2/3;
+    justify-content: center;
+ }
+
+ .lptext-1>p{
+    padding: 5px 0px;
+    font-weight: 600;
+ }
+
+ .plays {
+    grid-area: 2/1/4/3;
+    list-style: none;
+    padding: 3px;
+    grid-template-rows: 1fr 1fr;
+ }
+ .plays>li#X1 {
+    grid-area: 1/1/2/2;
+    justify-content: start;
+    grid-template-columns: 2fr 1fr;
+    height: 30px;
+ }
+ .plays>li#O1 {
+    grid-area: 2/1/3/2;
+    justify-content: center;
+    grid-template-columns: 2fr 1fr;
+    height: 30px;
+ }
+
+ .plays>li#X1>label {
+    grid-area: 1/1/2/2;
+    justify-content: start;
+    margin-left: 18px;
+    font-size: 1.1rem;
+    font-weight: 600;
+ }
+ .plays>li#X1>input {
+    grid-area: 1/2/2/3;
+    width: 15px;
+    height: 15px;
+    margin-left: 20px;
+ }
+
+ .plays>li#O1>label {
+    grid-area: 2/1/3/2;
+    justify-content: start;
+    margin-left: 18px;
+    font-size: 1.1rem;
+    font-weight: 600;
+ }
+
+ .plays>li#O1>input {
+    grid-area: 2/2/3/3;
+    width: 15px;
+    height: 15px;
+    margin-left: 20px;
+ }
+
+/*---------------------------------CENTRE SECTION------------------------------*/
+ .container {
+    grid-area: 2/2/3/3;
+    background-color: antiquewhite;
+    justify-content: center;
+    align-items: center;
+ }
+
+ /*---------------------------------RIGHT SECTION------------------------------*/
+ .rightPanel {
+    grid-area: 2/3/3/4;
+    background-color: antiquewhite;
+    justify-content: center;
+    width :100%;
+    margin-right: 0px;
+ }
+
+ .rightPanel>h2{
+    padding-left: 10px;
+ }
+
+ .win,
+ .winner {
+    justify-content :center;
+    align-items:center;
+    font-weight:700;
+    margin-right:0px;
+    padding-left:10px;
+    padding-right:10px;
+ }
+
+ /*---------------------------------FOOTER SECTION------------------------------*/
+ .footer {
+    grid-area: 3/1/4/4;
+    background-color: antiquewhite;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .footer>div {
+    width: 40vw;
+    height: 2rem;
+    background-color:none;
+ }
+
+ .footer>div>h2 {
+    color: red;
+ }
+
+/*---------------------------------GAME BOARD------------------------------*/
+.board {
+    width: 300px;
+    height: 300px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:    1fr 1fr 1fr;
+    background-color: aqua;
+    border: 2px solid blue;
+}
+
+.board>li {
+    display: grid;
+    list-style: none;
+    background-color: darkcyan;
+    border: 1px solid black;
+}
+
+input {
+    background-color: aqua;
+    font-size: 3rem;
+    color: white;
+}
+
+li>button#0 {
+    grid-area: 1/1/2/2;
+}
+li>button#1 {
+    grid-area: 1/2/2/3;
+}
+li>button#2 {
+    grid-area: 1/3/2/4;
+}
+li>button#3 {
+    grid-area: 2/1/3/2;
+}
+li>button#4 {
+    grid-area: 2/2/3/3;
+}
+li>button#5 {
+    grid-area: 2/3/3/4;
+}
+li>button#6 {
+    grid-area: 3/1/4/2;
+}
+li>button#7 {
+    grid-area: 3/2/4/3;
+}
+li>button#8 {
+    grid-area: 3/3/4/4;
+}
+
+/*---------------------------------GAME RESET------------------------------*/
+div.reset {
+    grid-area: 5/1/6/3;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.reset>#reset {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: blue; 
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: yellow; 
+  background-image: linear-gradient(
+    to top left,
+    rgb(0 0 0 / 20%),
+    rgb(0 0 0 / 20%) 30%,
+    rgb(0 0 0 / 0%)
+  );
+  box-shadow:
+    inset 2px 2px 3px rgb(255 255 255 / 60%),
+    inset -2px -2px 3px rgb(0 0 0 / 60%);
+}
+
+.reset>#reset:hover {
+  background-color: aqua; 
+}
+
+.reset>#reset:active {
+  box-shadow:
+    inset -2px -2px 3px rgb(255 255 255 / 60%),
+    inset 2px 2px 3px rgb(0 0 0 / 60%);
+}
+
